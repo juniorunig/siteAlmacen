@@ -22,7 +22,7 @@ export class VentaController {
 
     res: Response
   ) {
-    const { fechaVenta, SubTotal, impuesto, descuento, total } = req.body;
+    let { fechaVenta, SubTotal, impuesto, descuento, total } = req.body;
 
     try {
       let body: VentaI = {
@@ -35,7 +35,9 @@ export class VentaController {
 
       const venta: VentaI = await Venta.create({ ...body });
       res.status(200).json({ venta });
-    } catch (error) {}
+    } catch (error) {
+      console.log("no se pudo crear la venta" + error);
+    }
   }
 
   public async getOneVenta(req: Request, res: Response) {

@@ -24,9 +24,9 @@ Venta.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    subtotal: {
+    subTotal: {
       type: DataTypes.FLOAT,
-      allowNull: false,
+      allowNull: true,
     },
     impuesto: {
       type: DataTypes.FLOAT,
