@@ -20,7 +20,7 @@ export class TipoProductoRoutes {
       .get(this.tipoProductoController.getOneTipoProducto);
     app
       .route("/tipoProductos/:id")
-      .post(this.tipoProductoController.updateTipoProducto);
+      .put(this.tipoProductoController.updateTipoProducto);
     app
       .route("/tipoProductos/:id")
       .delete(this.tipoProductoController.deleteTipoProducto);
