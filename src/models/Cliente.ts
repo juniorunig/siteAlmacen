@@ -7,44 +7,43 @@ export class Cliente extends Model {
   public telefonoCliente!: string;
   public correoCliente!: string;
   public passwordCliente!: string;
-
 }
 
 export interface ClienteI {
-    nombreCliente: string;
-    direccionCliente: string;
-    telefonoCliente: string;
-    correoCliente: string;
-    passwordCliente: string;
+  nombreCliente: string;
+  direccionCliente: string;
+  telefonoCliente: string;
+  correoCliente: string;
+  passwordCliente: string;
 }
 
 Cliente.init(
   {
     nombreCliente: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     direccionCliente: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     telefonoCliente: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+      // unique: true
+    },
     correoCliente: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     passwordCliente: {
-        type: DataTypes.STRING,
-        allowNull: false
-      } 
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     tableName: "clientes",
     sequelize: database,
-    timestamps: true
+    timestamps: true,
   }
 );

@@ -12,17 +12,17 @@ export class TipoProductoRoutes {
       .route("/tipoProductos")
       .get(this.tipoProductoController.getAlltipoProducto);
     app
-      .route("/tipoProducto")
+      .route("/tipoProductos")
       .post(this.tipoProductoController.createTipoProducto);
 
     app
-      .route("/tipoProducto/:id")
+      .route("/tipoProductos/:id")
       .get(this.tipoProductoController.getOneTipoProducto);
     app
-      .route("/tipoProducto/:id")
+      .route("/tipoProductos/:id")
       .post(this.tipoProductoController.updateTipoProducto);
     app
-      .route("/tipoProducto/:id")
+      .route("/tipoProductos/:id")
       .delete(this.tipoProductoController.deleteTipoProducto);
   }
 }

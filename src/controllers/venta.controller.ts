@@ -22,12 +22,13 @@ export class VentaController {
 
     res: Response
   ) {
-    let { fechaVenta, SubTotal, impuesto, descuento, total } = req.body;
+    let { fechaVenta, subTotal, impuesto, descuento, total } = req.body;
+    // console.log(req.body + "backend");
 
     try {
       let body: VentaI = {
         fechaVenta,
-        SubTotal,
+        subTotal,
         impuesto,
         descuento,
         total,
@@ -60,11 +61,11 @@ export class VentaController {
   public async updateVenta(req: Request, res: Response) {
     const { id: pk } = req.params;
 
-    const { id, fechaVenta, SubTotal, impuesto, descuento, total } = req.body;
+    const { id, fechaVenta, subTotal, impuesto, descuento, total } = req.body;
     try {
       let body: VentaI = {
         fechaVenta,
-        SubTotal,
+        subTotal,
         impuesto,
         descuento,
         total,

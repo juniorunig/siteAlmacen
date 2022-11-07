@@ -1,7 +1,7 @@
 import { App } from "./config/index";
 
 async function main() {
-  const app = new App(3001);
+  const app = new App(3008);
   await app.listen();
 }
 

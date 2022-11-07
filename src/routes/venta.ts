@@ -10,7 +10,7 @@ export class ventaRoutes {
     app.route("/ventas").get(this.ventaController.getAllVenta);
     app.route("/ventas").post(this.ventaController.createVenta);
     app.route("/ventas/:id").get(this.ventaController.getOneVenta);
-    app.route("/ventas/:id").post(this.ventaController.updateVenta);
+    app.route("/ventas/:id").put(this.ventaController.updateVenta);
     app.route("/ventas/:id").delete(this.ventaController.deleteTipoVenta);
   }
 }

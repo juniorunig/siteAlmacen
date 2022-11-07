@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { where } from "sequelize/types";
 
 import { Cliente, ClienteI } from "../models/Cliente";
 
@@ -57,7 +56,7 @@ export class ClienteController {
         },
       });
       if (cliente != null) {
-        res.status(200).json(cliente);
+        res.status(200).json({ cliente });
       } else return res.status(300).json({ msg: "El Cliente no existe" });
     } catch (error) {
       res.status(500).json({ msg: "Error Internal" });

@@ -12,8 +12,8 @@ export class tipoProductoController {
 
   public async getAlltipoProducto(req: Request, res: Response) {
     try {
-      const tipoproducto: tipoProductoI[] = await tipoProducto.findAll(); // select * from clientes;
-      res.status(200).json({ tipoProducto });
+      const tipoProductos: tipoProductoI[] = await tipoProducto.findAll(); // select * from clientes;
+      res.status(200).json({ tipoProductos });
     } catch (error) {}
   }
 
@@ -46,7 +46,7 @@ export class tipoProductoController {
         },
       });
       if (tipoproducto != null) {
-        res.status(200).json(tipoproducto);
+        res.status(200).json({ tipoproducto });
       } else return res.status(300).json({ msg: "El TipoProducto no existe" });
     } catch (error) {
       res.status(500).json({ msg: "Error Internal" });
